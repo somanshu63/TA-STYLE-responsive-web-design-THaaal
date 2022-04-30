@@ -1,0 +1,245 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*custom*/
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1380px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4em;
+}
+body{
+	font-size: 16px;
+	font-family: 'PT Serif', serif;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.flex-start{
+	justify-content: flex-start;
+}
+.space-evenly{
+	justify-content: space-evenly;
+}
+.center{
+	align-items: center;
+}
+.flex-50{
+	flex: 0 1 50%;
+}
+.flex-30{
+	flex: 0 1 30%;
+}
+.width-full{
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+.padding{
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+.btn{
+	display: inline-block;
+	text-transform: capitalize;
+	color: white;
+	background-color: #53B667;
+	border-radius: 0.3rem;
+	font-family: 'Roboto', sans-serif;
+}
+p{
+	color: #8A8B8E;
+}
+.header, .footer{
+	font-family: 'Roboto', sans-serif;
+}
+
+/*header-navbar*/
+.header{
+	padding: 1em 0;
+	background-color: #222946;
+}
+.brand img{
+	width: 7.7rem;
+}
+.navbar-item{
+	margin-left: 2em;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.navbar-item a{
+	color: white;
+}
+.navbar-item .active{
+	color: #53B667;
+}
+
+
+/*about-article*/
+.about{
+	background-color: #e9ecfc; 
+}
+.article p{
+	font: 1rem;
+	line-height: 1.8;
+	margin: 1.8em 2em 1.5em 0;
+}
+.article h1{
+	font-size: 2.3rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.btn-primary{
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+}
+
+
+/*blog*/
+.blog h2{
+	font-size: 2.7rem;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 2em;
+	color: black;
+}
+.blog .blog-article img{
+	height: 16rem;
+}
+.blog .blog-article h3{
+	font-size: 1.9rem;
+	margin: 1em 0;
+}
+.blog .blog-article p{
+	font-size: 0.8rem;
+	line-height: 1.5;
+	margin-bottom: 1em;
+}
+.btn-secondary{
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+}
+
+
+/*footer*/
+.footer{
+	background-color: #222946;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.footer small{
+	font-size: 1.5rem;
+	color: rgb(187,191,209);
+}
+.footer-navbar a{
+	color: rgb(187,191,209);
+	margin-left: 2.2em;
+	font-size: 1.8rem;
+}
+
+
+/*below 768px*/
+@media screen and (max-width: 768px){	
+	body{
+		font-size: 10px;
+	}	
+	.header-navbar{
+		flex-direction: column;
+	}
+	.header .brand{
+		margin: 1em 0;
+	}
+	.header .navbar{
+		margin-bottom: 1rem;
+	}
+	.flex{
+		flex-wrap: wrap;
+	}
+	.flex-50, .flex-30{
+		flex: 1 1 100%;
+	}
+	.about{
+		flex-direction: column-reverse;
+	}
+	.article-img{
+		margin-bottom: 3em;
+	}
+	.blog{
+		margin: 0 4em;
+	}
+	.blog h2{
+		margin-bottom: 0;
+	}
+	.blog-article{
+		margin-top: 3em;
+	}
+	.blog .blog-article h3{
+		margin: 0.5em 0;
+	}
+	.footer-nav{
+		flex-direction: column;
+	}
+	.footer-nav small{
+		margin-bottom: 1em;
+	}
+	.footer .footer-navbar a{
+		margin: 0.5em;
+	}
+}
