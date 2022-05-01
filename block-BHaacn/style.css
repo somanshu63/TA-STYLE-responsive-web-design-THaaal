@@ -440,12 +440,45 @@ h1{
 
 
 /*mobile screen*/
-@media screen and (max-width:768px) {
+@media  screen and (max-width:1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media  screen and (max-width:992px) {
+    html{
+        font-size: 14px;
+    }
+    .container{
+        max-width: 960px;
+    }
+}
+@media  screen and (max-width:576px) {
     html{
         font-size: 10px;
     }
+    .container{
+        max-width: 540px;
+    }
+}
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+    html{
+        font-size: 12px;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        padding: 3rem;
+        background-color: rgba(0,0,0,0.3);
+    }
     .flex{
         flex-direction: column;
+        width: 100%;
+    }
+    .sm-width-full{
         width: 100%;
     }
     .brand{
@@ -459,6 +492,10 @@ h1{
     }
     #toggle:checked ~ .nav{
         display: inline-block;
+    }
+    .about-event img{
+        width: 100%;
+        padding-right: 0;
     }
     .bars{
         display: inline-block;
@@ -489,6 +526,9 @@ h1{
     .hero article, .why-join-article{
         margin-bottom: 3rem;
     }
+    .why-join{
+        margin-left: 1rem;
+    }
     .news-article{
         margin-bottom: 4rem;
     }
@@ -497,25 +537,50 @@ h1{
         flex-wrap: wrap;
     }
     .schedule .flex-15{
-        flex: 1 1 25%;
-        margin-left: 2rem;
+        flex: 0 1 40%;
+        margin-left: 1rem;
+    }
+    .schedule .flex-60{
+        flex: 0 1 100%;
+        margin-top: -2rem;
     }
     .schedule .line{
         display: none;
     }
-    .schedule .flex-60{
-        flex: 1 1 100%;
-        margin-top: -2rem;
+    .schedule .date{
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        border: 0;
+        border-radius: 0;
+        color: var(--red-color);
+        background-color: transparent;
     }
-    .schedule .dates{
-        flex-direction: row;
+    .schedule-img img{
+        height: 25vh;
     }
     .schedule .btn{
-        margin-left: 25%;
+        margin-left: 35%;
+    }
+    .news-article img{
+        height: 30vh;
     }
     .video .play{
-        top: 40%;
-        left: 42%
+        top: 42%;
+        left: 45%
+    }
+    .sm-flex{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+    .topics .flex-25{
+        flex-direction: row;
+    }
+    .footer{
+        text-align: center;
     }
     .footer h5{
         margin-bottom: 1rem;
